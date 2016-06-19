@@ -120,6 +120,9 @@
   <data name="Mainform_ClosingTip" xml:space="preserve">
     <value>是否要退出程序？</value>
   </data>
+  <data name="MainForm_OpenSucc" xml:space="preserve">
+    <value>打开成功</value>
+  </data>
   <data name="Prog_Name" xml:space="preserve">
     <value>像对相对定向-10130423张宜弛</value>
   </data>

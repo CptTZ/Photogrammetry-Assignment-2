@@ -70,6 +70,15 @@ namespace XDDX.Properties {
         }
         
         /// <summary>
+        ///   查找类似 打开成功 的本地化字符串。
+        /// </summary>
+        internal static string MainForm_OpenSucc {
+            get {
+                return ResourceManager.GetString("MainForm_OpenSucc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 像对相对定向-10130423张宜弛 的本地化字符串。
         /// </summary>
         internal static string Prog_Name {
