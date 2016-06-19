@@ -29,7 +29,18 @@ namespace XDDX.UI
                 return;
             }
 
-            _rO = new RelativeOrientation(_imgPane.GetDictionaryForCalculation(), _camPara);
+            try
+            {
+                _rO = new RelativeOrientation(_imgPane.GetDictionaryForCalculation(), _camPara);
+                _rO.SetLimit(0.3e-4); //书P83（5-27）下面要求
+                _rO.Process();
+
+                new ViewData(_rO).Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Resources.Prog_Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonImgPane_Click(object sender, EventArgs e)
@@ -60,13 +71,15 @@ namespace XDDX.UI
                 if (sfd.ShowDialog() != DialogResult.OK) return;
                 using (StreamWriter sw = new StreamWriter(sfd.OpenFile(), Encoding.Default))
                 {
-                    sw.WriteLine("点ID,左影像行号,左影像列号,右影像行号,右影像列号,左像平面X,左像平面Y,右像平面X,右像平面Y");
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("点ID,左影像行号,左影像列号,右影像行号,右影像列号,左像平面X,左像平面Y,右像平面X,右像平面Y");
                     foreach (var t in _dataPoint)
                     {
-                        sw.WriteLine(t.PointNumber + "," + t.LeftRowNumber + "," + t.LeftColNumber + "," +
-                                     t.RightRowNumber + "," + t.RightColNumber
-                                     + "," + t.lX + "," + t.lY + "," + t.rX + "," + t.rY);
+                        sb.AppendLine(t.PointNumber + "," + t.LeftRowNumber + "," + t.LeftColNumber + "," +
+                                      t.RightRowNumber + "," + t.RightColNumber
+                                      + "," + t.lX + "," + t.lY + "," + t.rX + "," + t.rY);
                     }
+                    sw.Write(sb.ToString());
                 }
                 #endregion
 

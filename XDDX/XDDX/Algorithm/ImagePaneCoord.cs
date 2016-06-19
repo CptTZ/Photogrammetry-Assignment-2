@@ -45,10 +45,10 @@ namespace XDDX.Algorithm
             {
                 if (Math.Abs(data[i].PointNumber - _existMatch[i]["ID"]) > 0.1)
                     throw new Exception("顺序改变，错误");
-                data[i].SetlX(Math.Round(_existMatch[i]["lXa"], 7));
-                data[i].SetrX(Math.Round(_existMatch[i]["rXa"], 7));
-                data[i].SetlY(Math.Round(_existMatch[i]["lYa"], 7));
-                data[i].SetrY(Math.Round(_existMatch[i]["rYa"], 7));
+                data[i].SetlX(Math.Round(_existMatch[i]["lXa"], 6));
+                data[i].SetrX(Math.Round(_existMatch[i]["rXa"], 6));
+                data[i].SetlY(Math.Round(_existMatch[i]["lYa"], 6));
+                data[i].SetrY(Math.Round(_existMatch[i]["rYa"], 6));
             }
         }
 
