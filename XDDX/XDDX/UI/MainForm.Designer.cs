@@ -50,15 +50,15 @@
             this.buttonImgPane = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataPoint = new System.Windows.Forms.DataGridView();
-            this.lX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pointNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leftRowNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leftColNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rightRowNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rightColNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
@@ -296,6 +296,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataPoint.AutoGenerateColumns = false;
+            this.dataPoint.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataPoint.ColumnHeadersHeight = 32;
             this.dataPoint.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pointNumberDataGridViewTextBoxColumn,
@@ -314,34 +315,6 @@
             this.dataPoint.RowTemplate.Height = 37;
             this.dataPoint.Size = new System.Drawing.Size(509, 296);
             this.dataPoint.TabIndex = 0;
-            // 
-            // lX
-            // 
-            this.lX.DataPropertyName = "lX";
-            this.lX.HeaderText = "左像平面X";
-            this.lX.Name = "lX";
-            this.lX.ReadOnly = true;
-            // 
-            // lY
-            // 
-            this.lY.DataPropertyName = "lY";
-            this.lY.HeaderText = "左像平面Y";
-            this.lY.Name = "lY";
-            this.lY.ReadOnly = true;
-            // 
-            // rX
-            // 
-            this.rX.DataPropertyName = "rX";
-            this.rX.HeaderText = "右像平面X";
-            this.rX.Name = "rX";
-            this.rX.ReadOnly = true;
-            // 
-            // rY
-            // 
-            this.rY.DataPropertyName = "rY";
-            this.rY.HeaderText = "右像平面Y";
-            this.rY.Name = "rY";
-            this.rY.ReadOnly = true;
             // 
             // pointNumberDataGridViewTextBoxColumn
             // 
@@ -377,6 +350,34 @@
             this.rightColNumberDataGridViewTextBoxColumn.HeaderText = "右列号";
             this.rightColNumberDataGridViewTextBoxColumn.Name = "rightColNumberDataGridViewTextBoxColumn";
             this.rightColNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lX
+            // 
+            this.lX.DataPropertyName = "lX";
+            this.lX.HeaderText = "左像平面X";
+            this.lX.Name = "lX";
+            this.lX.ReadOnly = true;
+            // 
+            // lY
+            // 
+            this.lY.DataPropertyName = "lY";
+            this.lY.HeaderText = "左像平面Y";
+            this.lY.Name = "lY";
+            this.lY.ReadOnly = true;
+            // 
+            // rX
+            // 
+            this.rX.DataPropertyName = "rX";
+            this.rX.HeaderText = "右像平面X";
+            this.rX.Name = "rX";
+            this.rX.ReadOnly = true;
+            // 
+            // rY
+            // 
+            this.rY.DataPropertyName = "rY";
+            this.rY.HeaderText = "右像平面Y";
+            this.rY.Name = "rY";
+            this.rY.ReadOnly = true;
             // 
             // dataListBindingSource1
             // 
